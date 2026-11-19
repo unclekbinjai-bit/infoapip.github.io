@@ -70,15 +70,14 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:0 0 36px}
 <body>
 <!--
   ===== PENGATURAN (ubah di sini saja) =====
-  Isi link produk Lynk.id dan harga pada objek CONFIG di bagian bawah file ini.
-  Kalau link dikosongkan, tombol otomatis diarahkan ke DM Instagram @infoapip.ai.
+  Harga ada di objek CONFIG, nomor WhatsApp di konstanta WA, di bagian bawah file ini.
 -->
 <div class="wrap">
   <header><a class="brand" href="https://instagram.com/infoapip.ai" target="_blank" rel="noopener"><span class="dot">iA</span>@infoapip.ai</a></header>
 
   <section class="hero">
     <h1>Bacaan ringan untuk hidup yang lebih lurus dan tangguh.</h1>
-    <p>Empat ebook karya Khairul Rijal, semuanya dengan bonus: bangkit dari krisis, melek politik sehari-hari, tetap bersih sebagai ASN, dan menyiapkan akhir hidup yang baik. Bayar lewat Lynk.id (QRIS, e-wallet, transfer) dan file langsung dikirim, atau pesan lewat WhatsApp.</p>
+    <p>Empat ebook karya Khairul Rijal, semuanya dengan bonus: bangkit dari krisis, melek politik sehari-hari, tetap bersih sebagai ASN, dan menyiapkan akhir hidup yang baik. Pesan lewat WhatsApp, bayar, dan file PDF langsung dikirim.</p>
   </section>
 
   <section class="books">
@@ -112,7 +111,7 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:0 0 36px}
             <li>Giliran Kamu: Cetak Biru Bangkit Pribadi</li>
           </ol>
         </details>
-        <div class="buy"><div class="price" data-price="bangkit"></div><a class="btn btn-bangkit" data-buy="bangkit" target="_blank" rel="noopener">Beli Ebook →</a><a class="btn-wa" data-wa="bangkit" target="_blank" rel="noopener">Pesan via WhatsApp</a></div>
+        <div class="buy"><div class="price" data-price="bangkit"></div><a class="btn btn-bangkit" data-wa="bangkit" target="_blank" rel="noopener">Pesan via WhatsApp →</a></div>
       </div>
     </article>
 
@@ -151,7 +150,7 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:0 0 36px}
             <li>Mulai dari yang Dekat</li>
           </ol>
         </details>
-        <div class="buy"><div class="price" data-price="politik"></div><a class="btn btn-politik" data-buy="politik" target="_blank" rel="noopener">Beli Ebook →</a><a class="btn-wa" data-wa="politik" target="_blank" rel="noopener">Pesan via WhatsApp</a></div>
+        <div class="buy"><div class="price" data-price="politik"></div><a class="btn btn-politik" data-wa="politik" target="_blank" rel="noopener">Pesan via WhatsApp →</a></div>
       </div>
     </article>
     <!-- EBOOK 1 -->
@@ -182,7 +181,7 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:0 0 36px}
             <li>Jalan Tol Menuju Jabatan, Versi Halal</li>
           </ol>
         </details>
-        <div class="buy"><div class="price" data-price="rompi"></div><a class="btn btn-rompi" data-buy="rompi" target="_blank" rel="noopener">Beli Ebook →</a><a class="btn-wa" data-wa="rompi" target="_blank" rel="noopener">Pesan via WhatsApp</a></div>
+        <div class="buy"><div class="price" data-price="rompi"></div><a class="btn btn-rompi" data-wa="rompi" target="_blank" rel="noopener">Pesan via WhatsApp →</a></div>
       </div>
     </article>
 
@@ -211,7 +210,7 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:0 0 36px}
             <li>Kabar Gembira di Penghujung: Tanda-tanda Husnul Khatimah</li>
           </ol>
         </details>
-        <div class="buy"><div class="price" data-price="pulang"></div><a class="btn btn-pulang" data-buy="pulang" target="_blank" rel="noopener">Beli Ebook →</a><a class="btn-wa" data-wa="pulang" target="_blank" rel="noopener">Pesan via WhatsApp</a></div>
+        <div class="buy"><div class="price" data-price="pulang"></div><a class="btn btn-pulang" data-wa="pulang" target="_blank" rel="noopener">Pesan via WhatsApp →</a></div>
       </div>
     </article>
   </section>
@@ -222,32 +221,27 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:0 0 36px}
     <a class="ig" href="https://instagram.com/infoapip.ai" target="_blank" rel="noopener">Ikuti @infoapip.ai di Instagram</a>
   </section>
 
-  <footer>© <span id="yr"></span> Khairul Rijal · Pembayaran aman melalui Lynk.id</footer>
+  <footer>© <span id="yr"></span> Khairul Rijal · Pemesanan melalui WhatsApp</footer>
 </div>
 <a class="wa-float" id="waFloat" target="_blank" rel="noopener">Tanya via WhatsApp</a>
 
 <script>
 /* ===== PENGATURAN ===== */
 const CONFIG = {
-  bangkit: { link: "https://lynk.id/kujauru", harga: "Rp29.000", hargaCoret: "" },
-  politik: { link: "https://lynk.id/kujauru", harga: "Rp29.000", hargaCoret: "" },
-  rompi:  { link: "https://lynk.id/kujauru", harga: "Rp29.000", hargaCoret: "" },
-  pulang: { link: "https://lynk.id/kujauru", harga: "Rp29.000", hargaCoret: "" }
+  bangkit: { harga: "Rp29.000", hargaCoret: "" },
+  politik: { harga: "Rp29.000", hargaCoret: "" },
+  rompi:  { harga: "Rp29.000", hargaCoret: "" },
+  pulang: { harga: "Rp29.000", hargaCoret: "" }
 };
-const FALLBACK = "https://ig.me/m/infoapip.ai"; // DM Instagram kalau link Lynk.id belum diisi
 /* ====================== */
 for (const [k, c] of Object.entries(CONFIG)) {
-  const b = document.querySelector(`[data-buy="${k}"]`);
-  b.href = c.link || FALLBACK;
-  if (!c.link) b.textContent = "Pesan via DM Instagram →";
-  else b.textContent = "Beli di Lynk.id →";
   const p = document.querySelector(`[data-price="${k}"]`);
-  p.innerHTML = c.harga ? (c.hargaCoret ? `<s>${c.hargaCoret}</s>` : "") + c.harga : "";
+  if (p) p.innerHTML = c.harga ? (c.hargaCoret ? `<s>${c.hargaCoret}</s>` : "") + c.harga : "";
 }
 const WA = "6282165221497";
 const JUDUL = {bangkit:"Negara Aja Bisa Bangkit, Masa Kamu Nggak?", politik:"Politik dalam Hidup", rompi:"Jangan Sampai Pakai Rompi Oranye", pulang:"Pulang dengan Tenang"};
 const waLink = t => `https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
-document.querySelectorAll("[data-wa]").forEach(a => { a.href = waLink(`Halo, saya mau pesan ebook "${JUDUL[a.dataset.wa]}".`); });
+document.querySelectorAll("[data-wa]").forEach(a => { a.href = waLink(`Halo, saya mau pesan ebook "${JUDUL[a.dataset.wa]}" (Rp29.000).`); });
 document.getElementById("waFloat").href = waLink("Halo, saya mau tanya tentang ebook Khairul Rijal.");
 document.getElementById("yr").textContent = new Date().getFullYear();
 </script>
